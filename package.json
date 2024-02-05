@@ -1,18 +1,16 @@
 {
-  "homepage" : "https://eddyog.github.io/eddyog/Eddys-portfolio",
+  "homepage": "https://eddyog.github.io/eddyog/Eddys-portfolio",
   "name": "eddys-portfolio",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
-    "predeploy" : "npm run dev",
-    "deploy" : "gh-pages -d build"
-
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "dependencies": {
     "@emailjs/browser": "^3.12.1",
