@@ -55,7 +55,21 @@ const Navbar = () => {
                 } hover:text-white text-[18px] font-medium cursor-pointer`}
               onClick={() => setActive(nav.title)}
             >
-              <a href={`#${nav.id}`}>{nav.title}</a>
+              <Link 
+                to={`/#${nav.id}`}
+                onClick={() => {
+                  setActive(nav.title);
+                  // Scroll to section after navigation
+                  setTimeout(() => {
+                    const element = document.getElementById(nav.id);
+                    if (element) {
+                      element.scrollIntoView({ behavior: 'smooth' });
+                    }
+                  }, 100);
+                }}
+              >
+                {nav.title}
+              </Link>
             </li>
 
           ))}
@@ -97,7 +111,22 @@ const Navbar = () => {
                     setActive(nav.title);
                   }}
                 >
-                  <a href={`#${nav.id}`}>{nav.title}</a>
+                  <Link 
+                    to={`/#${nav.id}`}
+                    onClick={() => {
+                      setToggle(!toggle);
+                      setActive(nav.title);
+                      // Scroll to section after navigation
+                      setTimeout(() => {
+                        const element = document.getElementById(nav.id);
+                        if (element) {
+                          element.scrollIntoView({ behavior: 'smooth' });
+                        }
+                      }, 100);
+                    }}
+                  >
+                    {nav.title}
+                  </Link>
                 </li>
               ))}
               <li>
