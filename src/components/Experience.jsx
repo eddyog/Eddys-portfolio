@@ -27,7 +27,7 @@ const ExperienceCard = ({ experience }) => {
           <img
             src={experience.icon}
             alt={experience.company_name}
-            className='w-[90%] h-[90%] object-contain'
+            className='w-[90%] h-[90%] object-contain rounded-full'
           />
         </div>
       }
@@ -59,13 +59,14 @@ const ExperienceCard = ({ experience }) => {
 const Experience = () => {
   return (
     <>
-      <motion.div variants={textVariant()}>
-        <p className={`${styles.sectionSubText} text-center`}>
-          What I have done so far
-        </p>
-        <h2 className={`${styles.sectionHeadText} text-center`}>
-          Work Experience.
-        </h2>
+      <motion.div
+        initial={{ opacity: 0, y: -50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ type: "spring", duration: 2.2 }}
+        viewport={{ once: true, amount: 0.2 }}
+      >
+        <p className={`${styles.sectionSubText} text-center`}>What I have done so far</p>
+        <h2 className={`${styles.sectionHeadText} text-center`}>Work Experience.</h2>
       </motion.div>
 
       <div className='mt-20 flex flex-col'>

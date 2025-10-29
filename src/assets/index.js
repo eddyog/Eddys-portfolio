@@ -33,7 +33,9 @@ import threejs from "./tech/threejs.svg";
 import meta from "./company/meta.png";
 import shopify from "./company/shopify.png";
 import byui from "./company/byui.png";
+import byu from "./company/byu.png";
 import church from "./company/church.png";
+import dhi from "./company/dhi.png";
 import starbucks from "./company/starbucks.png";
 import tesla from "./company/tesla.png";
 import nearsol from "./company/nearsol.png";
@@ -83,4 +85,6 @@ export {
   carrent,
   jobit,
   tripguide,
+  dhi,
+  byu,
 };

@@ -45,14 +45,18 @@ const About = () => {
 
       <motion.p
         variants={fadeIn("", "", 0.1, 1)}
-        className="mt-4 text-secondary text-[20px] max-w-3xl leading-[30px] text-white"
+        className="mt-4 text-[20px] max-w-3xl leading-[30px] text-white"
       >
-        Eddy Gonzalez is a diligent and ambitious individual with a strong work
-        ethic. He possesses a genuine eagerness to learn and explore diverse
-        professional realms, demonstrating a proactive approach to personal and
-        career development, who posses skills in Python, React Native, C++,
-        HTML, CSS, JavaScript, linux, Mysql, PHP, Webdriver.io, Monogodb,
-        RESTful APIs, Node.js, Tailwind.
+        Hi, I'm Eddy Gonzalez — a passionate and ambitious Software Engineer 
+        dedicated to building creative and impactful applications. 
+        I’m driven by curiosity and a strong desire to learn, always 
+        exploring new technologies to grow both personally and professionally. 
+        Through real-world development experience, I’ve strengthened my skills in 
+        building scalable web applications with Angular and C#, improving UI/UX through 
+        responsive design, and collaborating in Agile environments. 
+        My experience also spans mobile and full-stack development with 
+        tools like Python, React Native, C++, JavaScript, Node.js, HTML,
+         CSS, Tailwind, MySQL, PHP, Webdriver.io, and MongoDB.
       </motion.p>
 
       <div className="mt-20 flex flex-wrap gap-10 justify-center">

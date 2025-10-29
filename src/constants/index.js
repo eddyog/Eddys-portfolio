@@ -35,7 +35,10 @@ import {
   jobit,
   tripguide,
   threejs,
+  dhi,
+  byu,
 } from "../assets";
+
 
 export const navLinks = [
   {
@@ -74,7 +77,7 @@ const services = [
     icon: creator,
   },
   {
-    title: "QA Engineering",
+    title: "QA Engineer",
     icon: backend,
   },
 
@@ -97,19 +100,12 @@ const technologies = [
     name: "JavaScript",
     icon: javascript,
   },
-  {
-    name: "TypeScript",
-    icon: typescript,
-  },
+
   {
     name: "React JS",
     icon: reactjs,
   },
 
-  {
-    name: "Tailwind CSS",
-    icon: tailwind,
-  },
   {
     name: "Node JS",
     icon: nodejs,
@@ -122,10 +118,7 @@ const technologies = [
     name: "Three JS",
     icon: threejs,
   },
-  {
-    name: "git",
-    icon: git,
-  },
+
   {
     name: "Python",
     icon: python,
@@ -134,22 +127,43 @@ const technologies = [
     name: "C++",
     icon: cplus,
   },
+
   {
-    name: "PHP",
-    icon: php,
-  },
-  {
-    name: "webdriver.io",
-    icon: webdriver,
-  },
-  {
-    name: "Mysql",
+    name: "MySQL",
     icon: sql,
   },
 
 ];
 
 const experiences = [
+  {
+    title: "Master of Information Systems Management (MISM)",
+    company_name: "Brigham Young University – Marriott School of Business",
+    icon: byu,
+    iconBg: "#383E56",
+    date: "Sept 2025 - Present",
+    points: [
+      "Pursuing a Master’s degree in Information Systems Management with a focus on digital product management, data analytics, and system architecture.",
+      "Developing leadership and technical skills through courses in Agile development, cybersecurity, cloud infrastructure, and enterprise strategy.",
+      "Collaborating with peers and professors on real-world projects involving product innovation, business process improvement, and emerging technologies.",
+      "Committed to continuous learning and bridging the gap between technology and business strategy.",
+    ],
+  },
+  
+  {
+    title: "Software Engineer",
+    company_name: "DHI Computer Services inc",
+    icon: dhi,
+    iconBg: "#383E56",
+    date: "Nov 2024 - Mar 2025",
+    points: [
+      "Engineered and maintained web applications using Angular and C#, implementing new features and optimizing existing codebases.",
+      "Developed responsive, cross-browser interfaces with HTML and CSS (Scss/Sass) to enhance UI/UX in collaboration with designers.",
+      "Diagnosed and resolved technical issues, reducing bug-related delays and improving product stability.",
+      "Contributed to Agile workflows by reporting progress in daily scrums, assisting with debugging, and supporting deployments with the Ops team."
+    ],
+  },
+
   {
     title: "QA Engineering",
     company_name: "The Church of Jesus Christ of Latter-day Saints.",
@@ -166,16 +180,16 @@ const experiences = [
   },
 
   {
-    title: "Software Engineering - Education",
-    company_name: "Brigham Young University Idaho",
+    title: "Bachelor of Science in Software Engineering",
+    company_name: "Brigham Young University – Idaho",
     icon: byui,
     iconBg: "#383E56",
-    date: "April 2019 - Dec 2023",
+    date: "Apr 2019 - Dec 2023",
     points: [
-      "Bachelors of Science in Software Engineering",
-      "Certificate in Web Development Frontend and Backend",
-      "Participating in code reviews and providing constructive feedback to other developers.",
-      "GPA 3.5",
+      "Earned a Bachelor of Science in Software Engineering with a focus on full-stack development and software design principles.",
+      "Completed certificates in Frontend and Backend Web Development, gaining hands-on experience with modern web technologies.",
+      "Participated in collaborative code reviews and contributed constructive feedback to enhance code quality and team performance.",
+      "Graduated with a 3.5 GPA, demonstrating consistent academic excellence and commitment to continuous improvement.",
     ],
   },
 
@@ -191,7 +205,7 @@ const experiences = [
       "Handle complaints, provide appropriate solutions and alternatives within the time limits, and follow up to ensure resolution",
       "Take payment information and other pertinent information such as addresses and phone numbers",
       "Maintain financial accounts by processing customer adjustments",
-      "Provided outstanding customer service by showing concer, resolving in a timely manner and offering solutiongs and self-help options",
+      "Provided outstanding customer service by showing concern, resolving in a timely manner and offering solutions and self-help options",
     ],
   },
 
@@ -240,9 +254,9 @@ const testimonials = [
 
 const projects = [
   {
-    name: "Shoes Mobile Application",
+    name: "E-Commerce React Native App (Shoes Store)",
     description:
-      "This Mobile Application Shoes Ecommerce was created using Reat Native app building that consist of NodeJS Backend using Mongodb, separate Stripe Node Server with (strype payments) and React Native Frontend ",
+    "A cross-platform e-commerce mobile app built with React Native, showcasing my ability to design and develop full-featured mobile experiences. The app integrates a Node.js backend with MongoDB for data management and a separate Stripe Node server for secure payment processing, demonstrating my proficiency in mobile architecture, API integration, and end-to-end development.",
     tags: [
       {
         name: "React-Native",
@@ -263,7 +277,7 @@ const projects = [
   {
     name: "Submarine Game",
     description:
-      "Submarine is a game crated with Python Arcade. Is a 2 players game that consist of a submarine shooting obstacles and collecting coins to acumulate coins and win agains your opponent. ",
+      "Submarine is a game created with Python Arcade. Is a 2 players game that consist of a submarine shooting obstacles and collecting coins to collect coins and win agains your opponent. ",
     tags: [
       {
         name: "Python",

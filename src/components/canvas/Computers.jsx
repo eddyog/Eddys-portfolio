@@ -5,27 +5,47 @@ import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
 import CanvasLoader from "../Loader";
 
 const Computers = ({ isMobile }) => {
-  const computer = useGLTF("./desktop_pc/scene.gltf");
+  const computer = useGLTF("/desktop_pc/scene.gltf");
 
   return (
-    <mesh>
-      <hemisphereLight intensity={0.15} groundColor='black' />
-      <spotLight
-        position={[-20, 50, 10]}
-        angle={0.12}
-        penumbra={1}
-        intensity={10}
-        castShadow
-        shadow-mapSize={1024}
-      />
-      <pointLight intensity={1} />
-      <primitive
-        object={computer.scene}
-        scale={isMobile ? 0.7 : 0.75}
-        position={isMobile ? [0, -3, -2.2] : [0, -3.25, -1.5]}
-        rotation={[-0.01, -0.2, -0.1]}
-      />
-    </mesh>
+<mesh>
+  {/* Ambient / Hemisphere Light */}
+  <hemisphereLight intensity={1.4} groundColor='#0a0a0a' color='#ffffff' />
+
+  {/* Key Light - main bright source */}
+  <spotLight
+    position={[-10, 20, 10]}
+    angle={0.3}
+    penumbra={0.5}
+    intensity={4.5}
+    color="#fff8e7"
+    castShadow
+    shadow-mapSize={2048}
+  />
+
+  {/* Fill Light - softer, opposite side to reduce harsh shadows */}
+  <pointLight
+    position={[10, 10, -10]}
+    intensity={1.2}
+    color="#b0c4de"
+  />
+
+  {/* Rim Light - behind and slightly above the object for outline separation */}
+  <directionalLight
+    position={[5, 10, -15]}
+    intensity={5.2}
+    color="#ffdca8"
+  />
+
+  {/* The Model */}
+  <primitive
+    object={computer.scene}
+    scale={isMobile ? 0.7 : 0.75}
+    position={isMobile ? [0, -4, -2.2] : [0, -3.25, -1.5]}
+    rotation={[-0.01, -0.2, -0.1]}
+  />
+</mesh>
+
   );
 };
 
@@ -63,9 +83,12 @@ const ComputersCanvas = () => {
     >
       <Suspense fallback={<CanvasLoader />}>
         <OrbitControls
+        autoRotate
           enableZoom={false}
           maxPolarAngle={Math.PI / 2}
           minPolarAngle={Math.PI / 2}
+          autoRotateSpeed={2}
+
         />
         <Computers isMobile={isMobile} />
       </Suspense>
