@@ -40,9 +40,6 @@ import starbucks from "./company/starbucks.png";
 import tesla from "./company/tesla.png";
 import nearsol from "./company/nearsol.png";
 
-import carrent from "./carrent.png";
-import jobit from "./jobit.png";
-import tripguide from "./tripguide.png";
 
 export {
   temples,
@@ -82,9 +79,6 @@ export {
   nearsol,
   church,
   tesla,
-  carrent,
-  jobit,
-  tripguide,
   dhi,
   byu,
 };
